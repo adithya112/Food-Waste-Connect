@@ -1,0 +1,15 @@
+{% extends "foods/base.html" %}
+{% load tailwind_filters %}
+
+{% block content %}
+<form method="post">
+    <fieldset class="border-b border-gray-400 text-gray-900 text-2xl my-2 py-2">
+        Add Food Details
+    </fieldset>
+    {% csrf_token %}
+    {{ form|crispy}}
+    <button type="submit" class="bg-blue-400 hover:bg-blue-600 px-6 py-2 rounded-md text-white ">Add</button>
+</form>
+</div>
+{% endblock content %}
+
